@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Pacifico&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(253, 229, 187);
+}
+
+
+.container-header{
+    width: 100vw;
+    
+}
+
+/* Animação do texto ----------------------------*/
+
+.lett-header{
+    width: 80%;
+    margin-top: 5%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    fill: transparent;
+    animation: lett-preenchimento 0.5s 3s ease-in-out forwards;
+}
+@keyframes lett-preenchimento{
+    to {
+        fill: #BE253F
+    }
+}
+
+.lett-header path{
+    stroke-width: 2px;
+    stroke: #BE253F;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: lett-tracado 5s 1s ease-in-out forwards;
+}
+@keyframes lett-tracado{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Animação do texto fim ----------------------------*/
+
+/* font style ----------------------------*/
+h1, h2{
+    font-family: 'Pacifico', cursive;
+    color: #BE253F;
+    text-align: center;
+}
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 1.5em;
+}
+p{
+    font-family: 'Lato', sans-serif;
+    color: #484848;
+    font-size: 1em;
+}
+/* section dicas ----------------------------*/
+.container-cards{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 50%;
+    height: 450px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* section dicas ----------------------------*/
+/* Animação dos cards ----------------------------*/
+
+.icones{
+    animation: icones .9s infinite alternate;
+}
+
+@keyframes icones{
+    to{
+        transform: scale(.95);
+    }
+}
+
+/* Footer ----------------------------*/
+.container-footer{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.lett-footer{
+    width: 60%;
+    fill: #fff;
+    opacity: .7;
+
+    position: absolute;
+    left: 20%;
+    margin-top: 25%;
+}
+
+/**/
+
+@media (max-width: 700px){
+    .container-cards{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card{
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+}
